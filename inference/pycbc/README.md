@@ -15,9 +15,21 @@ cd workflows/
 git clone https://github.com/PoSeiDon-Workflows/pycbc.git
 ```
 
+- Switch to `interference/pycbc` directory
+```
+cd interference/pycbc
+```
+
+- Fetch the data files
+```
+cd data
+./get.sh
+cd ..
+```
+
 - Switch to `gw_output` directory
 ```
-interference/pycbc/gw_output
+cd gw_output
 ```
 
 You are now ready to plan and run the workflow as per the steps indicated in the next sections.
