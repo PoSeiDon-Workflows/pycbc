@@ -9,10 +9,10 @@ sites:
   os.type: linux
   directories:
   - type: sharedScratch
-    path: /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/local-site-scratch
+    path: /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/local-site-scratch
     sharedFileSystem: false
     fileServers:
-    - url: file:///home/poseidon/workflows/pycbc/interference/pycbc/gw_output/local-site-scratch
+    - url: file:///home/poseidon/workflows/pycbc/inference/pycbc/gw_output/local-site-scratch
       operation: all
   profiles:
     condor:
@@ -46,11 +46,11 @@ sites:
   os.type: linux
   #directories:
   #- type: sharedScratch
-  #  path: /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/cpool-site-scratch-copy
+  #  path: /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/cpool-site-scratch-copy
   #  sharedFileSystem: false
   #  fileServers:
-  #  - url: file:///home/poseidon/workflows/pycbc/interference/pycbc/gw_output/cpool-site-scratch-copy
-  #    #- url: scp://poseidon@poseidon-data:/home/poseidon/workflows/pycbc/interference/pycbc/gw_output/cpool-site-scratch-copy
+  #  - url: file:///home/poseidon/workflows/pycbc/inference/pycbc/gw_output/cpool-site-scratch-copy
+  #    #- url: scp://poseidon@poseidon-data:/home/poseidon/workflows/pycbc/inference/pycbc/gw_output/cpool-site-scratch-copy
   #    operation: all
   profiles:
     condor:
@@ -78,10 +78,10 @@ sites:
   os.type: linux
   directories:
   - type: sharedScratch
-    path: /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/cpool-site-scratch
+    path: /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/cpool-site-scratch
     sharedFileSystem: false
     fileServers:
-    - url: file:///home/poseidon/workflows/pycbc/interference/pycbc/gw_output/cpool-site-scratch
+    - url: file:///home/poseidon/workflows/pycbc/inference/pycbc/gw_output/cpool-site-scratch
       operation: all
   profiles:
     condor:

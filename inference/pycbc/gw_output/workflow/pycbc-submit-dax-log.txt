@@ -1,6 +1,6 @@
 Generating concrete workflow
 2023.10.16 15:49:16.875 UTC: [WARNING]  --dax option is deprecated. The abstract workflow is passed via the last positional argument on the commandline. 
-2023.10.16 15:49:16.886 UTC: [INFO]  Planner launched in the following directory /home/poseidon/workflows/pycbc/interference/pycbc/gw_output 
+2023.10.16 15:49:16.886 UTC: [INFO]  Planner launched in the following directory /home/poseidon/workflows/pycbc/inference/pycbc/gw_output 
 2023.10.16 15:49:16.886 UTC: [INFO]  Planner invoked with following arguments --conf ./pegasus-properties.conf --dir ./pycbc-tmp.6G7PELOUTq --submit --output-sites local --sites local,condorpool_shared --staging-site local=local,condorpool_shared=condorpool_shared --cluster label,horizontal --cleanup inplace --relative-dir work -q --dax gw.dax  
 2023.10.16 15:49:16.888 UTC: [CONFIG]  Pegasus Properties set by the user 
 2023.10.16 15:49:16.888 UTC: [CONFIG]  pegasus.catalog.replica.cache.asrc=true 
@@ -32,7 +32,7 @@ Generating concrete workflow
 2023.10.16 15:49:16.892 UTC: [CONFIG]  pegasus.transfer.worker.package=true 
 2023.10.16 15:49:17.486 UTC: [INFO] event.pegasus.add.data-dependencies dax.id gw.dax-0  - STARTED 
 2023.10.16 15:49:17.486 UTC: [INFO] event.pegasus.add.data-dependencies dax.id gw.dax-0  (0.0 seconds) - FINISHED 
-2023.10.16 15:49:17.510 UTC: [CONFIG]  Loading site catalog file /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/sites.yml 
+2023.10.16 15:49:17.510 UTC: [CONFIG]  Loading site catalog file /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/sites.yml 
 2023.10.16 15:49:17.582 UTC: [CONFIG]  Set environment profile for local site PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/poseidon/go/bin 
 2023.10.16 15:49:17.583 UTC: [CONFIG]  Constructed default site catalog entry for condorpool site <site  handle="condorpool" arch="x86_64" os="linux" osrelease="" osversion="" glibc="">
 	<profile namespace="pegasus" key="style" >condor</profile>
@@ -42,8 +42,8 @@ Generating concrete workflow
 2023.10.16 15:49:17.844 UTC: [CONFIG]  Transformation Catalog Type used Multiline Textual TC 
 2023.10.16 15:49:17.844 UTC: [CONFIG]  Transformation Catalog File used /tmp/tc.2396322340797404215.txt 
 2023.10.16 15:49:17.845 UTC: [CONFIG]  Data Configuration used for the workflow condorio 
-2023.10.16 15:49:17.847 UTC: [CONFIG]  Metrics file will be written out to /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work/gw.dax-0.metrics 
-2023.10.16 15:49:17.847 UTC: [CONFIG]  The base submit directory for the workflow        /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq 
+2023.10.16 15:49:17.847 UTC: [CONFIG]  Metrics file will be written out to /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work/gw.dax-0.metrics 
+2023.10.16 15:49:17.847 UTC: [CONFIG]  The base submit directory for the workflow        /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq 
 2023.10.16 15:49:17.847 UTC: [CONFIG]  The relative submit directory for the workflow    work 
 2023.10.16 15:49:17.847 UTC: [CONFIG]  The relative execution directory for the workflow work 
 2023.10.16 15:49:17.848 UTC: [INFO] event.pegasus.stampede.events dax.id gw.dax-0  - STARTED 
@@ -126,23 +126,23 @@ Generating concrete workflow
 2023.10.16 15:49:18.668 UTC: [INFO] event.pegasus.code.generation dax.id gw.dax-0  (0.727 seconds) - FINISHED 
 2023.10.16 15:49:19.697 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/.pegasus/workflow.db) 
 2023.10.16 15:49:20.881 UTC:   Pegasus database was successfully created. 
-2023.10.16 15:49:20.886 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work/gw.dax-0.replicas.db) 
-2023.10.16 15:49:20.923 UTC:   Output replica catalog set to jdbc:sqlite:/home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work/gw.dax-0.replicas.db 
+2023.10.16 15:49:20.886 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work/gw.dax-0.replicas.db) 
+2023.10.16 15:49:20.923 UTC:   Output replica catalog set to jdbc:sqlite:/home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work/gw.dax-0.replicas.db 
 2023.10.16 15:49:21.140 UTC:   Submitting to condor gw.dax-0.dag.condor.sub 
 2023.10.16 15:49:21.711 UTC:    
 2023.10.16 15:49:21.712 UTC:   Submitting job(s). 
 2023.10.16 15:49:21.716 UTC:   Your workflow has been started and is running in the base directory: 
 2023.10.16 15:49:21.717 UTC:   1 job(s) submitted to cluster 74. 
 2023.10.16 15:49:21.722 UTC:    
-2023.10.16 15:49:21.727 UTC:   /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work 
+2023.10.16 15:49:21.727 UTC:   /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work 
 2023.10.16 15:49:21.732 UTC:    
 2023.10.16 15:49:21.737 UTC:   *** To monitor the workflow you can run *** 
 2023.10.16 15:49:21.743 UTC:    
-2023.10.16 15:49:21.748 UTC:   pegasus-status -l /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work 
+2023.10.16 15:49:21.748 UTC:   pegasus-status -l /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work 
 2023.10.16 15:49:21.753 UTC:    
 2023.10.16 15:49:21.759 UTC:   *** To remove your workflow run *** 
 2023.10.16 15:49:21.764 UTC:    
-2023.10.16 15:49:21.769 UTC:   pegasus-remove /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work 
+2023.10.16 15:49:21.769 UTC:   pegasus-remove /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.6G7PELOUTq/work 
 2023.10.16 15:49:22.021 UTC:   Time taken to execute is 5.004 seconds 
 2023.10.16 15:49:22.021 UTC: [INFO] event.pegasus.planner planner.version 5.0.6  (5.156 seconds) - FINISHED 
 
@@ -157,7 +157,7 @@ workflows.
 
 Generating concrete workflow
 2023.10.16 15:58:20.221 UTC: [WARNING]  --dax option is deprecated. The abstract workflow is passed via the last positional argument on the commandline. 
-2023.10.16 15:58:20.232 UTC: [INFO]  Planner launched in the following directory /home/poseidon/workflows/pycbc/interference/pycbc/gw_output 
+2023.10.16 15:58:20.232 UTC: [INFO]  Planner launched in the following directory /home/poseidon/workflows/pycbc/inference/pycbc/gw_output 
 2023.10.16 15:58:20.232 UTC: [INFO]  Planner invoked with following arguments --conf ./pegasus-properties.conf --dir ./pycbc-tmp.DJrtMCxHnX --submit --output-sites local --sites local,condorpool_shared --staging-site local=local,condorpool_shared=condorpool_shared --cluster label,horizontal --cleanup inplace --relative-dir work -q --dax gw.dax  
 2023.10.16 15:58:20.234 UTC: [CONFIG]  Pegasus Properties set by the user 
 2023.10.16 15:58:20.234 UTC: [CONFIG]  pegasus.catalog.replica.cache.asrc=true 
@@ -189,7 +189,7 @@ Generating concrete workflow
 2023.10.16 15:58:20.238 UTC: [CONFIG]  pegasus.transfer.worker.package=true 
 2023.10.16 15:58:20.823 UTC: [INFO] event.pegasus.add.data-dependencies dax.id gw.dax-0  - STARTED 
 2023.10.16 15:58:20.824 UTC: [INFO] event.pegasus.add.data-dependencies dax.id gw.dax-0  (0.0 seconds) - FINISHED 
-2023.10.16 15:58:20.847 UTC: [CONFIG]  Loading site catalog file /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/sites.yml 
+2023.10.16 15:58:20.847 UTC: [CONFIG]  Loading site catalog file /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/sites.yml 
 2023.10.16 15:58:20.918 UTC: [CONFIG]  Set environment profile for local site PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/poseidon/go/bin 
 2023.10.16 15:58:20.918 UTC: [CONFIG]  Constructed default site catalog entry for condorpool site <site  handle="condorpool" arch="x86_64" os="linux" osrelease="" osversion="" glibc="">
 	<profile namespace="pegasus" key="style" >condor</profile>
@@ -199,8 +199,8 @@ Generating concrete workflow
 2023.10.16 15:58:21.178 UTC: [CONFIG]  Transformation Catalog Type used Multiline Textual TC 
 2023.10.16 15:58:21.178 UTC: [CONFIG]  Transformation Catalog File used /tmp/tc.15920343881976076652.txt 
 2023.10.16 15:58:21.180 UTC: [CONFIG]  Data Configuration used for the workflow condorio 
-2023.10.16 15:58:21.181 UTC: [CONFIG]  Metrics file will be written out to /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work/gw.dax-0.metrics 
-2023.10.16 15:58:21.182 UTC: [CONFIG]  The base submit directory for the workflow        /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX 
+2023.10.16 15:58:21.181 UTC: [CONFIG]  Metrics file will be written out to /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work/gw.dax-0.metrics 
+2023.10.16 15:58:21.182 UTC: [CONFIG]  The base submit directory for the workflow        /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX 
 2023.10.16 15:58:21.182 UTC: [CONFIG]  The relative submit directory for the workflow    work 
 2023.10.16 15:58:21.182 UTC: [CONFIG]  The relative execution directory for the workflow work 
 2023.10.16 15:58:21.183 UTC: [INFO] event.pegasus.stampede.events dax.id gw.dax-0  - STARTED 
@@ -283,23 +283,23 @@ Generating concrete workflow
 2023.10.16 15:58:22.006 UTC: [INFO] event.pegasus.code.generation dax.id gw.dax-0  (0.728 seconds) - FINISHED 
 2023.10.16 15:58:23.034 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/.pegasus/workflow.db) 
 2023.10.16 15:58:24.211 UTC:   Pegasus database was successfully created. 
-2023.10.16 15:58:24.217 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work/gw.dax-0.replicas.db) 
-2023.10.16 15:58:24.271 UTC:   Output replica catalog set to jdbc:sqlite:/home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work/gw.dax-0.replicas.db 
+2023.10.16 15:58:24.217 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work/gw.dax-0.replicas.db) 
+2023.10.16 15:58:24.271 UTC:   Output replica catalog set to jdbc:sqlite:/home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work/gw.dax-0.replicas.db 
 2023.10.16 15:58:24.491 UTC:   Submitting to condor gw.dax-0.dag.condor.sub 
 2023.10.16 15:58:25.065 UTC:   Submitting job(s). 
 2023.10.16 15:58:25.065 UTC:    
 2023.10.16 15:58:25.070 UTC:   1 job(s) submitted to cluster 95. 
 2023.10.16 15:58:25.070 UTC:   Your workflow has been started and is running in the base directory: 
 2023.10.16 15:58:25.075 UTC:    
-2023.10.16 15:58:25.080 UTC:   /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work 
+2023.10.16 15:58:25.080 UTC:   /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work 
 2023.10.16 15:58:25.085 UTC:    
 2023.10.16 15:58:25.091 UTC:   *** To monitor the workflow you can run *** 
 2023.10.16 15:58:25.096 UTC:    
-2023.10.16 15:58:25.101 UTC:   pegasus-status -l /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work 
+2023.10.16 15:58:25.101 UTC:   pegasus-status -l /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work 
 2023.10.16 15:58:25.106 UTC:    
 2023.10.16 15:58:25.111 UTC:   *** To remove your workflow run *** 
 2023.10.16 15:58:25.116 UTC:    
-2023.10.16 15:58:25.121 UTC:   pegasus-remove /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work 
+2023.10.16 15:58:25.121 UTC:   pegasus-remove /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.DJrtMCxHnX/work 
 2023.10.16 15:58:25.353 UTC:   Time taken to execute is 5.001 seconds 
 2023.10.16 15:58:25.354 UTC: [INFO] event.pegasus.planner planner.version 5.0.6  (5.139 seconds) - FINISHED 
 
@@ -314,7 +314,7 @@ workflows.
 
 Generating concrete workflow
 2023.10.16 22:08:11.079 UTC: [WARNING]  --dax option is deprecated. The abstract workflow is passed via the last positional argument on the commandline. 
-2023.10.16 22:08:11.091 UTC: [INFO]  Planner launched in the following directory /home/poseidon/workflows/pycbc/interference/pycbc/gw_output 
+2023.10.16 22:08:11.091 UTC: [INFO]  Planner launched in the following directory /home/poseidon/workflows/pycbc/inference/pycbc/gw_output 
 2023.10.16 22:08:11.091 UTC: [INFO]  Planner invoked with following arguments --conf ./pegasus-properties.conf --dir ./pycbc-tmp.yhoRUb9E5x --submit --output-sites local --sites local,condorpool_shared --staging-site local=local,condorpool_shared=condorpool_shared --cluster label,horizontal --cleanup inplace --relative-dir work -q --dax gw.dax  
 2023.10.16 22:08:11.093 UTC: [CONFIG]  Pegasus Properties set by the user 
 2023.10.16 22:08:11.093 UTC: [CONFIG]  pegasus.catalog.replica.cache.asrc=true 
@@ -346,7 +346,7 @@ Generating concrete workflow
 2023.10.16 22:08:11.095 UTC: [CONFIG]  pegasus.transfer.worker.package=true 
 2023.10.16 22:08:11.698 UTC: [INFO] event.pegasus.add.data-dependencies dax.id gw.dax-0  - STARTED 
 2023.10.16 22:08:11.699 UTC: [INFO] event.pegasus.add.data-dependencies dax.id gw.dax-0  (0.001 seconds) - FINISHED 
-2023.10.16 22:08:11.722 UTC: [CONFIG]  Loading site catalog file /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/sites.yml 
+2023.10.16 22:08:11.722 UTC: [CONFIG]  Loading site catalog file /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/sites.yml 
 2023.10.16 22:08:11.790 UTC: [CONFIG]  Set environment profile for local site PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/poseidon/go/bin 
 2023.10.16 22:08:11.790 UTC: [CONFIG]  Constructed default site catalog entry for condorpool site <site  handle="condorpool" arch="x86_64" os="linux" osrelease="" osversion="" glibc="">
 	<profile namespace="pegasus" key="style" >condor</profile>
@@ -356,8 +356,8 @@ Generating concrete workflow
 2023.10.16 22:08:12.048 UTC: [CONFIG]  Transformation Catalog Type used Multiline Textual TC 
 2023.10.16 22:08:12.048 UTC: [CONFIG]  Transformation Catalog File used /tmp/tc.16264494132201034057.txt 
 2023.10.16 22:08:12.050 UTC: [CONFIG]  Data Configuration used for the workflow condorio 
-2023.10.16 22:08:12.051 UTC: [CONFIG]  Metrics file will be written out to /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work/gw.dax-0.metrics 
-2023.10.16 22:08:12.051 UTC: [CONFIG]  The base submit directory for the workflow        /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x 
+2023.10.16 22:08:12.051 UTC: [CONFIG]  Metrics file will be written out to /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work/gw.dax-0.metrics 
+2023.10.16 22:08:12.051 UTC: [CONFIG]  The base submit directory for the workflow        /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x 
 2023.10.16 22:08:12.051 UTC: [CONFIG]  The relative submit directory for the workflow    work 
 2023.10.16 22:08:12.051 UTC: [CONFIG]  The relative execution directory for the workflow work 
 2023.10.16 22:08:12.052 UTC: [INFO] event.pegasus.stampede.events dax.id gw.dax-0  - STARTED 
@@ -440,23 +440,23 @@ Generating concrete workflow
 2023.10.16 22:08:12.865 UTC: [INFO] event.pegasus.code.generation dax.id gw.dax-0  (0.722 seconds) - FINISHED 
 2023.10.16 22:08:13.881 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/.pegasus/workflow.db) 
 2023.10.16 22:08:15.025 UTC:   Pegasus database was successfully created. 
-2023.10.16 22:08:15.030 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work/gw.dax-0.replicas.db) 
-2023.10.16 22:08:15.075 UTC:   Output replica catalog set to jdbc:sqlite:/home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work/gw.dax-0.replicas.db 
+2023.10.16 22:08:15.030 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work/gw.dax-0.replicas.db) 
+2023.10.16 22:08:15.075 UTC:   Output replica catalog set to jdbc:sqlite:/home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work/gw.dax-0.replicas.db 
 2023.10.16 22:08:15.291 UTC:   Submitting to condor gw.dax-0.dag.condor.sub 
 2023.10.16 22:08:15.865 UTC:   Submitting job(s). 
 2023.10.16 22:08:15.865 UTC:    
 2023.10.16 22:08:15.870 UTC:   1 job(s) submitted to cluster 296. 
 2023.10.16 22:08:15.870 UTC:   Your workflow has been started and is running in the base directory: 
 2023.10.16 22:08:15.876 UTC:    
-2023.10.16 22:08:15.881 UTC:   /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work 
+2023.10.16 22:08:15.881 UTC:   /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work 
 2023.10.16 22:08:15.886 UTC:    
 2023.10.16 22:08:15.892 UTC:   *** To monitor the workflow you can run *** 
 2023.10.16 22:08:15.897 UTC:    
-2023.10.16 22:08:15.902 UTC:   pegasus-status -l /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work 
+2023.10.16 22:08:15.902 UTC:   pegasus-status -l /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work 
 2023.10.16 22:08:15.907 UTC:    
 2023.10.16 22:08:15.912 UTC:   *** To remove your workflow run *** 
 2023.10.16 22:08:15.918 UTC:    
-2023.10.16 22:08:15.923 UTC:   pegasus-remove /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work 
+2023.10.16 22:08:15.923 UTC:   pegasus-remove /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.yhoRUb9E5x/work 
 2023.10.16 22:08:16.191 UTC:   Time taken to execute is 4.945 seconds 
 2023.10.16 22:08:16.191 UTC: [INFO] event.pegasus.planner planner.version 5.0.6  (5.118 seconds) - FINISHED 
 
@@ -471,7 +471,7 @@ workflows.
 
 Generating concrete workflow
 2023.10.16 22:10:16.158 UTC: [WARNING]  --dax option is deprecated. The abstract workflow is passed via the last positional argument on the commandline. 
-2023.10.16 22:10:16.169 UTC: [INFO]  Planner launched in the following directory /home/poseidon/workflows/pycbc/interference/pycbc/gw_output 
+2023.10.16 22:10:16.169 UTC: [INFO]  Planner launched in the following directory /home/poseidon/workflows/pycbc/inference/pycbc/gw_output 
 2023.10.16 22:10:16.170 UTC: [INFO]  Planner invoked with following arguments --conf ./pegasus-properties.conf --dir ./pycbc-tmp.cmnh1JYmJj --submit --output-sites local --sites local,condorpool_shared --staging-site local=local,condorpool_shared=condorpool_shared --cluster label,horizontal --cleanup inplace --relative-dir work -q --dax gw.dax  
 2023.10.16 22:10:16.171 UTC: [CONFIG]  Pegasus Properties set by the user 
 2023.10.16 22:10:16.171 UTC: [CONFIG]  pegasus.catalog.replica.cache.asrc=true 
@@ -503,7 +503,7 @@ Generating concrete workflow
 2023.10.16 22:10:16.175 UTC: [CONFIG]  pegasus.transfer.worker.package=true 
 2023.10.16 22:10:17.048 UTC: [INFO] event.pegasus.add.data-dependencies dax.id gw.dax-0  - STARTED 
 2023.10.16 22:10:17.049 UTC: [INFO] event.pegasus.add.data-dependencies dax.id gw.dax-0  (0.0 seconds) - FINISHED 
-2023.10.16 22:10:17.072 UTC: [CONFIG]  Loading site catalog file /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/sites.yml 
+2023.10.16 22:10:17.072 UTC: [CONFIG]  Loading site catalog file /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/sites.yml 
 2023.10.16 22:10:17.141 UTC: [CONFIG]  Set environment profile for local site PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/poseidon/go/bin 
 2023.10.16 22:10:17.141 UTC: [CONFIG]  Constructed default site catalog entry for condorpool site <site  handle="condorpool" arch="x86_64" os="linux" osrelease="" osversion="" glibc="">
 	<profile namespace="pegasus" key="style" >condor</profile>
@@ -513,8 +513,8 @@ Generating concrete workflow
 2023.10.16 22:10:17.402 UTC: [CONFIG]  Transformation Catalog Type used Multiline Textual TC 
 2023.10.16 22:10:17.402 UTC: [CONFIG]  Transformation Catalog File used /tmp/tc.15262779426937446490.txt 
 2023.10.16 22:10:17.406 UTC: [CONFIG]  Data Configuration used for the workflow condorio 
-2023.10.16 22:10:17.407 UTC: [CONFIG]  Metrics file will be written out to /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work/gw.dax-0.metrics 
-2023.10.16 22:10:17.407 UTC: [CONFIG]  The base submit directory for the workflow        /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj 
+2023.10.16 22:10:17.407 UTC: [CONFIG]  Metrics file will be written out to /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work/gw.dax-0.metrics 
+2023.10.16 22:10:17.407 UTC: [CONFIG]  The base submit directory for the workflow        /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj 
 2023.10.16 22:10:17.408 UTC: [CONFIG]  The relative submit directory for the workflow    work 
 2023.10.16 22:10:17.408 UTC: [CONFIG]  The relative execution directory for the workflow work 
 2023.10.16 22:10:17.409 UTC: [INFO] event.pegasus.stampede.events dax.id gw.dax-0  - STARTED 
@@ -597,23 +597,23 @@ Generating concrete workflow
 2023.10.16 22:10:18.236 UTC: [INFO] event.pegasus.code.generation dax.id gw.dax-0  (0.734 seconds) - FINISHED 
 2023.10.16 22:10:19.230 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/.pegasus/workflow.db) 
 2023.10.16 22:10:20.369 UTC:   Pegasus database was successfully created. 
-2023.10.16 22:10:20.374 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work/gw.dax-0.replicas.db) 
-2023.10.16 22:10:20.421 UTC:   Output replica catalog set to jdbc:sqlite:/home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work/gw.dax-0.replicas.db 
+2023.10.16 22:10:20.374 UTC:   Database version: '5.0.6' (sqlite:////home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work/gw.dax-0.replicas.db) 
+2023.10.16 22:10:20.421 UTC:   Output replica catalog set to jdbc:sqlite:/home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work/gw.dax-0.replicas.db 
 2023.10.16 22:10:20.633 UTC:   Submitting to condor gw.dax-0.dag.condor.sub 
 2023.10.16 22:10:21.203 UTC:   Submitting job(s). 
 2023.10.16 22:10:21.203 UTC:    
 2023.10.16 22:10:21.208 UTC:   1 job(s) submitted to cluster 298. 
 2023.10.16 22:10:21.209 UTC:   Your workflow has been started and is running in the base directory: 
 2023.10.16 22:10:21.214 UTC:    
-2023.10.16 22:10:21.220 UTC:   /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work 
+2023.10.16 22:10:21.220 UTC:   /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work 
 2023.10.16 22:10:21.225 UTC:    
 2023.10.16 22:10:21.230 UTC:   *** To monitor the workflow you can run *** 
 2023.10.16 22:10:21.235 UTC:    
-2023.10.16 22:10:21.240 UTC:   pegasus-status -l /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work 
+2023.10.16 22:10:21.240 UTC:   pegasus-status -l /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work 
 2023.10.16 22:10:21.245 UTC:    
 2023.10.16 22:10:21.250 UTC:   *** To remove your workflow run *** 
 2023.10.16 22:10:21.255 UTC:    
-2023.10.16 22:10:21.261 UTC:   pegasus-remove /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work 
+2023.10.16 22:10:21.261 UTC:   pegasus-remove /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/pycbc-tmp.cmnh1JYmJj/work 
 2023.10.16 22:10:21.502 UTC:   Time taken to execute is 5.207 seconds 
 2023.10.16 22:10:21.502 UTC: [INFO] event.pegasus.planner planner.version 5.0.6  (5.35 seconds) - FINISHED 
 

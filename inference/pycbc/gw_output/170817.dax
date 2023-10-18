@@ -9,19 +9,19 @@ replicaCatalog:
   - lfn: inference-170817.ini
     pfns:
     - site: local
-      pfn: file:///home/poseidon/workflows/pycbc/interference/pycbc/gw_output/config_files/inference-170817.ini
+      pfn: file:///home/poseidon/workflows/pycbc/inference/pycbc/gw_output/config_files/inference-170817.ini
   - lfn: H-H1_LOSC_CLN_4_V1-1187007040-2048.gwf
     pfns:
     - site: local
-      pfn: file:///home/poseidon/workflows/pycbc/interference/pycbc/data/H-H1_LOSC_CLN_4_V1-1187007040-2048.gwf
+      pfn: file:///home/poseidon/workflows/pycbc/inference/pycbc/data/H-H1_LOSC_CLN_4_V1-1187007040-2048.gwf
   - lfn: L-L1_LOSC_CLN_4_V1-1187007040-2048.gwf 
     pfns:
     - site: local
-      pfn: file:///home/poseidon/workflows/pycbc/interference/pycbc/data/L-L1_LOSC_CLN_4_V1-1187007040-2048.gwf
+      pfn: file:///home/poseidon/workflows/pycbc/inference/pycbc/data/L-L1_LOSC_CLN_4_V1-1187007040-2048.gwf
   - lfn: V-V1_LOSC_CLN_4_V1-1187007040-2048.gwf
     pfns:
     - site: local
-      pfn: file:///home/poseidon/workflows/pycbc/interference/pycbc/data/V-V1_LOSC_CLN_4_V1-1187007040-2048.gwf
+      pfn: file:///home/poseidon/workflows/pycbc/inference/pycbc/data/V-V1_LOSC_CLN_4_V1-1187007040-2048.gwf
 transformationCatalog:
   transformations:
   - name: inference_ID0

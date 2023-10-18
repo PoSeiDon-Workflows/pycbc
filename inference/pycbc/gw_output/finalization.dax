@@ -28,9 +28,9 @@ jobs:
   - --analysis-subtitle
   - '"GW170817 with dynesty sampler and single template model"'
   - --output-path
-  - /home/poseidon/workflows/pycbc/interference/pycbc/html
+  - /home/poseidon/workflows/pycbc/inference/pycbc/html
   - --plots-dir
-  - /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/results
+  - /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/results
   - --template-file
   - templates/orange.html
   uses: []

@@ -9,19 +9,19 @@ replicaCatalog:
   - lfn: main.map
     pfns:
     - site: local
-      pfn: /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/main.map
+      pfn: /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/main.map
   - lfn: main.dax
     pfns:
     - site: local
-      pfn: /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/main.dax
+      pfn: /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/main.dax
   - lfn: finalization.map
     pfns:
     - site: local
-      pfn: /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/finalization.map
+      pfn: /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/finalization.map
   - lfn: finalization.dax
     pfns:
     - site: local
-      pfn: /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/finalization.dax
+      pfn: /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/finalization.dax
 transformationCatalog:
   transformations: []
 jobs:

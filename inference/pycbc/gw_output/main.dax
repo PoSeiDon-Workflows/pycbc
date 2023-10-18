@@ -9,11 +9,11 @@ replicaCatalog:
   - lfn: 170817.map
     pfns:
     - site: local
-      pfn: /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/170817.map
+      pfn: /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/170817.map
   - lfn: 170817.dax
     pfns:
     - site: local
-      pfn: /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/170817.dax
+      pfn: /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/170817.dax
 transformationCatalog:
   transformations:
   - name: page_versioning_ID7

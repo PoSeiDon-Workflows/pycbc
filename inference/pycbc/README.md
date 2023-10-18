@@ -15,9 +15,9 @@ cd workflows/
 git clone https://github.com/PoSeiDon-Workflows/pycbc.git
 ```
 
-- Switch to `pycbc/interference/pycbc` directory
+- Switch to `pycbc/inference/pycbc` directory
 ```
-cd pycbc/interference/pycbc
+cd pycbc/inference/pycbc
 ```
 
 - Fetch the data files
@@ -44,11 +44,11 @@ pegasus-plan --conf ./pegasus-properties.conf --dir submitdir --output-sites loc
 ## Run the workflow
 Run the workflow using the following command:
 ```
-pegasus-run  /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/submitdir/work
+pegasus-run  /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/submitdir/work
 ```
 
 ## Check the status of the workflow
 Check the status of the workflow using the following command:
 ```
-pegasus-status -l /home/poseidon/workflows/pycbc/interference/pycbc/gw_output/submitdir/work
+pegasus-status -l /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/submitdir/work
 ```
