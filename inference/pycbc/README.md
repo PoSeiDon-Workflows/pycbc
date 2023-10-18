@@ -15,9 +15,9 @@ cd workflows/
 git clone https://github.com/PoSeiDon-Workflows/pycbc.git
 ```
 
-- Switch to `interference/pycbc` directory
+- Switch to `pycbc/interference/pycbc` directory
 ```
-cd interference/pycbc
+cd pycbc/interference/pycbc
 ```
 
 - Fetch the data files
