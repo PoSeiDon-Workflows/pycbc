@@ -1,0 +1,1 @@
+Executing on poseidon-submit in directory /home/poseidon/workflows/pycbc/interference/pycbc/gw_output at Mon Oct 16 22:10:14 UTC 2023
