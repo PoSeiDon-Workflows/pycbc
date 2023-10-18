@@ -103,8 +103,8 @@ jobs:
   - ''
   - --nprocesses
   - '2'
-  - --config-overrides
-  - data:frame-files:'H1:/home/poseidon/pycbc_config_data/H-*.gwf L1:/home/poseidon/pycbc_config_data/L-*.gwf V1:/home/poseidon/pycbc_config_data/V-*.gwf'
+  #- --config-overrides
+  #- data:frame-files:'H1:/home/poseidon/pycbc_config_data/H-*.gwf L1:/home/poseidon/pycbc_config_data/L-*.gwf V1:/home/poseidon/pycbc_config_data/V-*.gwf'
   - --config-file
   - inference-170817.ini
   - --seed
