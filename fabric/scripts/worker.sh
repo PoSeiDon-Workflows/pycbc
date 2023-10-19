@@ -34,6 +34,8 @@ USE_SHARED_PORT = TRUE
 
 NETWORK_INTERFACE = ens7
 
+ENABLE_IPV6 = FALSE
+
 # the nodes have shared filesystem
 UID_DOMAIN = \$(CONDOR_HOST)
 TRUST_UID_DOMAIN = TRUE
