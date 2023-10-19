@@ -1,0 +1,43 @@
+x-pegasus:
+  apiLang: python
+  createdBy: poseidon
+  createdOn: 10-16-23T15:49:14Z
+pegasus: 5.0.4
+name: finalization.dax
+replicaCatalog:
+  replicas: []
+transformationCatalog:
+  transformations:
+  - name: results_page_ID8
+    sites:
+    - name: local
+      pfn: /usr/local/bin/pycbc_make_html_page
+      type: installed
+      arch: x86_64
+      os.type: linux
+    profiles:
+      pegasus:
+        relative.submit.dir: results_page
+jobs:
+- type: job
+  name: results_page_ID8
+  id: ID0000001
+  arguments:
+  - --analysis-title
+  - '"Example PyCBC Inference Workflow"'
+  - --analysis-subtitle
+  - '"GW170817 with dynesty sampler and single template model"'
+  - --output-path
+  - /home/poseidon/workflows/pycbc/inference/pycbc/html
+  - --plots-dir
+  - /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/results
+  - --template-file
+  - templates/orange.html
+  uses: []
+  profiles:
+    dagman:
+      category: results_page
+      priority: 1000
+    selector:
+      execution_site: local
+jobDependencies: []
