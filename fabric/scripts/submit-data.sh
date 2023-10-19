@@ -69,6 +69,7 @@ SEC_CLIENT_ENCRYPTION = OPTIONAL
 HOSTALLOW_WRITE = *
 ALLOW_NEGOTIATOR = *
 
+ENABLE_IPV6 = FALSE
 EOF
 
 condor_store_cred -f /etc/condor/pool_password -p p0s31d0n
