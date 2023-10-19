@@ -1,6 +1,9 @@
 # Inference workflow
 
-## Setup the workflow
+## Notebook
+This workflow can be deployed on Fabric via (notebook)[fabric/inference.ipynb]
+
+## Setup the workflow (Manual steps)
 NOTE: All the steps indicated below should be executed as posiedon user
 
 - Install the required packages using the command below:
