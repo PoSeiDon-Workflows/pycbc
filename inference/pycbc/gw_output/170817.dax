@@ -13,14 +13,17 @@ replicaCatalog:
   - lfn: H-H1_LOSC_CLN_4_V1-1187007040-2048.gwf
     pfns:
     - site: local
+      #pfn: scp:///poseidon@poseidon-data:/home/poseidon/workflows/pycbc/inference/pycbc/data/H-H1_LOSC_CLN_4_V1-1187007040-2048.gwf
       pfn: file:///home/poseidon/workflows/pycbc/inference/pycbc/data/H-H1_LOSC_CLN_4_V1-1187007040-2048.gwf
   - lfn: L-L1_LOSC_CLN_4_V1-1187007040-2048.gwf 
     pfns:
     - site: local
+      #pfn: scp:///poseidon@poseidon-data:/home/poseidon/workflows/pycbc/inference/pycbc/data/L-L1_LOSC_CLN_4_V1-1187007040-2048.gwf
       pfn: file:///home/poseidon/workflows/pycbc/inference/pycbc/data/L-L1_LOSC_CLN_4_V1-1187007040-2048.gwf
   - lfn: V-V1_LOSC_CLN_4_V1-1187007040-2048.gwf
     pfns:
     - site: local
+      #pfn: scp:///poseidon@poseidon-data:/home/poseidon/workflows/pycbc/inference/pycbc/data/V-V1_LOSC_CLN_4_V1-1187007040-2048.gwf
       pfn: file:///home/poseidon/workflows/pycbc/inference/pycbc/data/V-V1_LOSC_CLN_4_V1-1187007040-2048.gwf
 transformationCatalog:
   transformations:
@@ -103,8 +106,6 @@ jobs:
   - ''
   - --nprocesses
   - '2'
-  #- --config-overrides
-  #- data:frame-files:'H1:/home/poseidon/pycbc_config_data/H-*.gwf L1:/home/poseidon/pycbc_config_data/L-*.gwf V1:/home/poseidon/pycbc_config_data/V-*.gwf'
   - --config-file
   - inference-170817.ini
   - --seed

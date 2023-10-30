@@ -20,112 +20,15 @@ sites:
       getenv: 'True'
     pegasus:
       style: condor
-- name: condorpool_symlink
-  arch: x86_64
-  os.type: linux
-  directories: []
-  profiles:
-    condor:
-      request_memory: 1G
-      +OpenScienceGrid: 'False'
-      should_transfer_files: 'Yes'
-      when_to_transfer_output: ON_EXIT_OR_EVICT
-      getenv: 'True'
-      +DESIRED_Sites: '"nogrid"'
-      +IS_GLIDEIN: '"False"'
-      +flock_local: 'True'
-    dagman:
-      retry: '2'
-    pegasus:
-      style: condor
-      data.configuration: nonsharedfs
-      transfer.bypass.input.staging: 'true'
-      auxillary.local: 'true'
 - name: condorpool_copy
   arch: x86_64
   os.type: linux
-  #directories:
-  #- type: sharedScratch
-  #  path: /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/cpool-site-scratch-copy
-  #  sharedFileSystem: false
-  #  fileServers:
-  #  - url: file:///home/poseidon/workflows/pycbc/inference/pycbc/gw_output/cpool-site-scratch-copy
-  #    #- url: scp://poseidon@poseidon-data:/home/poseidon/workflows/pycbc/inference/pycbc/gw_output/cpool-site-scratch-copy
-  #    operation: all
   profiles:
     condor:
       request_memory: 2G
-      #+OpenScienceGrid: 'False'
-      #should_transfer_files: 'Yes'
-      #when_to_transfer_output: ON_EXIT_OR_EVICT
-      #getenv: 'True'
-      #+DESIRED_Sites: '"nogrid"'
-      #+IS_GLIDEIN: '"False"'
-      #+flock_local: 'True'
     dagman:
       retry: '2'
     pegasus:
       style: condor
       data.configuration: condorio 
-      #transfer.bypass.input.staging: 'true'
-      #data.configuration: nonsharedfs
-      #transfer.bypass.input.staging: 'true'
-      #nosymlink: 'True'
-      #auxillary.local: 'true'
-      #ssh_private_key: /home/poseidon/.ssh/id_rsa
-- name: condorpool_shared
-  arch: x86_64
-  os.type: linux
-  directories:
-  - type: sharedScratch
-    path: /home/poseidon/workflows/pycbc/inference/pycbc/gw_output/cpool-site-scratch
-    sharedFileSystem: false
-    fileServers:
-    - url: file:///home/poseidon/workflows/pycbc/inference/pycbc/gw_output/cpool-site-scratch
-      operation: all
-  profiles:
-    condor:
-      request_memory: 1G
-      +OpenScienceGrid: 'False'
-      should_transfer_files: 'Yes'
-      when_to_transfer_output: ON_EXIT_OR_EVICT
-      getenv: 'True'
-      +DESIRED_Sites: '"nogrid"'
-      +IS_GLIDEIN: '"False"'
-      +flock_local: 'True'
-    dagman:
-      retry: '2'
-    env:
-      PEGASUS_HOME: /usr/
-    pegasus:
-      style: condor
-      data.configuration: condorio 
-      #data.configuration: sharedfs
-      #transfer.bypass.input.staging: 'true'
-      #auxillary.local: 'true'
-- name: osg
-  arch: x86_64
-  os.type: linux
-  directories: []
-  profiles:
-    condor:
-      request_memory: 1G
-      should_transfer_files: 'Yes'
-      when_to_transfer_output: ON_SUCCESS
-      success_exit_code: '0'
-      +OpenScienceGrid: 'True'
-      getenv: 'False'
-      +InitializeModulesEnv: 'False'
-      +SingularityCleanEnv: 'True'
-      Requirements: (HAS_SINGULARITY =?= TRUE) && (HAS_LIGO_FRAMES =?= True) && (IS_GLIDEIN
-        =?= True)
-      +SingularityImage: '"/cvmfs/singularity.opensciencegrid.org/pycbc/pycbc-el8:v2.3.0"'
-    dagman:
-      retry: '4'
-    env:
-      LAL_DATA_PATH: /cvmfs/software.igwn.org/pycbc/lalsuite-extra/current/share/lalsimulation
-      LD_LIBRARY_PATH: /usr/local/lib:/.singularity.d/libs
-    pegasus:
-      style: condor
-      data.configuration: condorio
-      transfer.bypass.input.staging: 'true'
+      ssh_private_key: /home/poseidon/.ssh/id_rsa
