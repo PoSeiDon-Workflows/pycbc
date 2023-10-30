@@ -1,0 +1,6 @@
+*.gwf
+posterior_files/
+results/
+samples_files/
+submitdir/
+html/
