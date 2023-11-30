@@ -23,6 +23,13 @@ sites:
 - name: condorpool_copy
   arch: x86_64
   os.type: linux
+  directories:
+  - type: sharedScratch
+    path: /home/poseidon/workflows/pycbc/inference/pycbc/shared-scratch
+    sharedFileSystem: false
+    fileServers:
+    - url: scp://poseidon@poseidon-data/home/poseidon/workflows/pycbc/inference/pycbc/shared-scratch
+      operation: all
   profiles:
     condor:
       request_memory: 2G
@@ -30,5 +37,5 @@ sites:
       retry: '2'
     pegasus:
       style: condor
-      data.configuration: condorio 
-      ssh_private_key: /home/poseidon/.ssh/id_rsa
+      data.configuration: nonsharedfs 
+      SSH_PRIVATE_KEY: /home/poseidon/.ssh/id_rsa
