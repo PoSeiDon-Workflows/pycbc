@@ -1,0 +1,43 @@
+x-pegasus:
+  apiLang: python
+  createdBy: poseidon
+  createdOn: 01-04-24T14:49:04Z
+pegasus: 5.0.4
+name: gw-finalization.dax
+replicaCatalog:
+  replicas: []
+transformationCatalog:
+  transformations:
+  - name: results_page_ID175
+    sites:
+    - name: condorpool_copy
+      pfn: /usr/local/bin/pycbc_make_html_page
+      type: installed
+      arch: x86_64
+      os.type: linux
+    profiles:
+      pegasus:
+        relative.submit.dir: results_page
+jobs:
+- type: job
+  name: results_page_ID175
+  id: ID0000001
+  arguments:
+  - --analysis-title
+  - '"PyCBC search"'
+  - --analysis-subtitle
+  - '"Small Test Search"'
+  - --output-path
+  - /home/poseidon/workflows/pycbc/search/pycbc/html
+  - --plots-dir
+  - /home/poseidon/workflows/pycbc/search/pycbc/output/results
+  - --template-file
+  - templates/orange.html
+  uses: []
+  profiles:
+    dagman:
+      category: results_page
+      priority: 1000
+    selector:
+      execution_site: condorpool_copy
+jobDependencies: []
