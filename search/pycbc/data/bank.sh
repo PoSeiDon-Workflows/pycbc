@@ -1,9 +1,20 @@
 #!/bin/bash
 set -e
 
+# Check if an output directory is specified as an argument
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <output_dir>"
+    exit 1
+fi
+
+output_dir="$1"
+
+# Ensure the output directory exists
+mkdir -p "$output_dir"
+
 pycbc_brute_bank \
 --verbose \
---output-file bank.hdf \
+--output-file "$output_dir/bank.hdf" \
 --minimal-match 0.95 \
 --tolerance .005 \
 --buffer-length 2 \
