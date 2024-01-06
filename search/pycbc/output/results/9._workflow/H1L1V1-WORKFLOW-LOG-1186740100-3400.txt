@@ -1,0 +1,104 @@
+2024-01-04 14:48:45,293:INFO : Created log file /home/poseidon/workflows/pycbc/search/pycbc/output/results/9._workflow/H1L1V1-WORKFLOW-LOG-1186740100-3400.txt
+2024-01-04 14:48:47,599:INFO : H1: got segments-science flags
+2024-01-04 14:48:49,323:INFO : L1: got segments-science flags
+2024-01-04 14:48:51,018:INFO : V1: got segments-science flags
+2024-01-04 14:48:51,023:INFO : Entering datafind module
+2024-01-04 14:48:51,023:INFO : Starting datafind with setup_datafind_runtime_generated
+2024-01-04 14:48:51,023:INFO : setup_datafind_runtime_generated completed
+2024-01-04 14:48:51,028:INFO : Leaving datafind module
+2024-01-04 14:48:54,395:INFO : H1: got segments-vetoes flags
+2024-01-04 14:48:57,836:INFO : L1: got segments-vetoes flags
+2024-01-04 14:49:01,210:INFO : V1: got segments-vetoes flags
+2024-01-04 14:49:01,215:INFO : H1: no segments requested
+2024-01-04 14:49:01,215:INFO : L1: no segments requested
+2024-01-04 14:49:01,215:INFO : V1: no segments requested
+2024-01-04 14:49:01,217:INFO : Entering template bank generation module.
+2024-01-04 14:49:01,217:INFO : Setting template bank from pre-generated bank(s).
+2024-01-04 14:49:01,217:INFO : Input bank is a hdf file
+2024-01-04 14:49:01,217:INFO : convert template bank to HDF
+2024-01-04 14:49:01,218:INFO : Leaving template bank generation module.
+2024-01-04 14:49:01,218:INFO : Entering split output files module.
+2024-01-04 14:49:01,218:INFO : Adding split output file jobs to workflow.
+2024-01-04 14:49:01,218:INFO : Leaving split output files module.
+2024-01-04 14:49:01,219:INFO : Entering matched-filtering setup module.
+2024-01-04 14:49:01,219:INFO : Adding matched-filter jobs to workflow.
+2024-01-04 14:49:01,219:INFO : Setting up matched-filtering for H1.
+2024-01-04 14:49:01,277:INFO : Setting up matched-filtering for L1.
+2024-01-04 14:49:01,338:INFO : Setting up matched-filtering for V1.
+2024-01-04 14:49:01,410:INFO : Leaving matched-filtering setup module.
+2024-01-04 14:49:01,413:INFO : Setting up coincidence
+2024-01-04 14:49:01,420:INFO : ...leaving coincidence 
+2024-01-04 14:49:01,420:INFO : No reranking done in this workflow
+2024-01-04 14:49:01,420:INFO : Setting up coincidence
+2024-01-04 14:49:01,421:INFO : ...leaving coincidence 
+2024-01-04 14:49:01,421:INFO : No reranking done in this workflow
+2024-01-04 14:49:01,421:INFO : Setting up coincidence
+2024-01-04 14:49:01,422:INFO : ...leaving coincidence 
+2024-01-04 14:49:01,423:INFO : No reranking done in this workflow
+2024-01-04 14:49:01,423:INFO : Setting up coincidence
+2024-01-04 14:49:01,427:INFO : ...leaving coincidence 
+2024-01-04 14:49:01,427:INFO : No reranking done in this workflow
+2024-01-04 14:49:01,428:INFO : ...leaving coincidence 
+2024-01-04 14:49:01,428:INFO : ...leaving coincidence 
+2024-01-04 14:49:01,429:INFO : ...leaving coincidence 
+2024-01-04 14:49:01,429:INFO : Setting up exclude zerolag
+2024-01-04 14:49:01,430:INFO : Setting up exclude zerolag
+2024-01-04 14:49:01,430:INFO : Setting up exclude zerolag
+2024-01-04 14:49:01,430:INFO : Setting up exclude zerolag
+2024-01-04 14:49:01,431:INFO : Setting up exclude zerolag
+2024-01-04 14:49:01,431:INFO : Setting up exclude zerolag
+2024-01-04 14:49:01,432:INFO : Setting up exclude zerolag
+2024-01-04 14:49:01,432:INFO : Setting up combine statmap
+2024-01-04 14:49:01,482:WARNING : DO NOT GIVE ME EMPTY TAGS (in plot_snrchi)
+2024-01-04 14:49:01,483:WARNING : DO NOT GIVE ME EMPTY TAGS (in plot_snrchi)
+2024-01-04 14:49:01,483:WARNING : DO NOT GIVE ME EMPTY TAGS (in plot_snrchi)
+2024-01-04 14:49:01,498:INFO : Entering minifollowups module
+2024-01-04 14:49:02,168:INFO : Leaving minifollowups module
+2024-01-04 14:49:02,168:INFO : Entering minifollowups module
+2024-01-04 14:49:02,342:INFO : Leaving minifollowups module
+2024-01-04 14:49:02,342:INFO : Entering minifollowups module
+2024-01-04 14:49:02,523:INFO : Leaving minifollowups module
+2024-01-04 14:49:02,523:INFO : Entering minifollowups module
+2024-01-04 14:49:02,706:INFO : Leaving minifollowups module
+2024-01-04 14:49:02,706:INFO : Entering minifollowups module
+2024-01-04 14:49:02,897:INFO : Leaving minifollowups module
+2024-01-04 14:49:02,897:INFO : Entering minifollowups module
+2024-01-04 14:49:03,090:INFO : Leaving minifollowups module
+2024-01-04 14:49:03,092:WARNING : warning: config file is missing section [page_ifar_catalog]
+2024-01-04 14:49:03,114:INFO : Entering minifollowups module
+2024-01-04 14:49:03,321:INFO : Leaving minifollowups module
+2024-01-04 14:49:03,321:INFO : Entering minifollowups module
+2024-01-04 14:49:03,511:INFO : Leaving minifollowups module
+2024-01-04 14:49:03,653:INFO : Entering split output files module.
+2024-01-04 14:49:03,653:INFO : Adding split output file jobs to workflow.
+2024-01-04 14:49:03,653:INFO : Leaving split output files module.
+2024-01-04 14:49:03,653:INFO : Entering injection module.
+2024-01-04 14:49:03,654:INFO : Leaving injection module.
+2024-01-04 14:49:03,654:WARNING : warning: config file is missing section [inj2hdf]
+2024-01-04 14:49:03,675:INFO : Entering matched-filtering setup module.
+2024-01-04 14:49:03,675:INFO : Adding matched-filter jobs to workflow.
+2024-01-04 14:49:03,675:INFO : Setting up matched-filtering for H1.
+2024-01-04 14:49:03,676:INFO : Setting up matched-filtering for L1.
+2024-01-04 14:49:03,677:INFO : Setting up matched-filtering for V1.
+2024-01-04 14:49:03,678:INFO : Leaving matched-filtering setup module.
+2024-01-04 14:49:03,679:INFO : Setting up coincidence for injections
+2024-01-04 14:49:03,689:INFO : ...leaving coincidence for injections
+2024-01-04 14:49:03,698:INFO : No reranking done in this workflow
+2024-01-04 14:49:03,698:INFO : Setting up coincidence for injections
+2024-01-04 14:49:03,708:INFO : ...leaving coincidence for injections
+2024-01-04 14:49:03,718:INFO : No reranking done in this workflow
+2024-01-04 14:49:03,718:INFO : Setting up coincidence for injections
+2024-01-04 14:49:03,728:INFO : ...leaving coincidence for injections
+2024-01-04 14:49:03,737:INFO : No reranking done in this workflow
+2024-01-04 14:49:03,737:INFO : Setting up coincidence for injections
+2024-01-04 14:49:03,812:INFO : ...leaving coincidence for injections
+2024-01-04 14:49:03,886:INFO : No reranking done in this workflow
+2024-01-04 14:49:03,887:INFO : ...leaving coincidence 
+2024-01-04 14:49:03,888:INFO : ...leaving coincidence 
+2024-01-04 14:49:03,889:INFO : ...leaving coincidence 
+2024-01-04 14:49:03,889:INFO : Setting up combine statmap
+2024-01-04 14:49:03,913:INFO : Entering injection minifollowups module
+2024-01-04 14:49:04,090:INFO : Leaving injection minifollowups module
+2024-01-04 14:49:04,329:WARNING : SiteCatalog and TransformationCatalog objects embedded into the root Workflow are not inherited by SubWorkflow jobs. To set SiteCatalog and TransformationCatalog objects in SubWorkflows, ensure that they are embedded into those SubWorkflows.
+2024-01-04 14:49:04,641:WARNING : SiteCatalog and TransformationCatalog objects embedded into the root Workflow are not inherited by SubWorkflow jobs. To set SiteCatalog and TransformationCatalog objects in SubWorkflows, ensure that they are embedded into those SubWorkflows.
+2024-01-04 14:49:04,642:INFO : Written dax.
