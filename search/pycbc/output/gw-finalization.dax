@@ -10,7 +10,7 @@ transformationCatalog:
   transformations:
   - name: results_page_ID175
     sites:
-    - name: condorpool_copy
+    - name: local
       pfn: /usr/local/bin/pycbc_make_html_page
       type: installed
       arch: x86_64
@@ -39,5 +39,5 @@ jobs:
       category: results_page
       priority: 1000
     selector:
-      execution_site: condorpool_copy
+      execution_site: local
 jobDependencies: []
