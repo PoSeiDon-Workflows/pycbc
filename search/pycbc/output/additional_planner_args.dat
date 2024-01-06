@@ -1,0 +1,1 @@
+--output-sites local --sites local,condorpool_copy --cluster label,horizontal --cleanup inplace --relative-dir work -q --dax gw.dax

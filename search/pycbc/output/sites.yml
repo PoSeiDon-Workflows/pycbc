@@ -1,0 +1,36 @@
+x-pegasus:
+  apiLang: python
+  createdBy: poseidon
+  createdOn: 01-04-24T14:49:04Z
+pegasus: 5.0.4
+sites:
+- name: local
+  arch: x86_64
+  os.type: linux
+  directories:
+  - type: sharedScratch
+    path: /home/poseidon/workflows/pycbc/search/pycbc/output/local-site-scratch
+    sharedFileSystem: false
+    fileServers:
+    - url: file:///home/poseidon/workflows/pycbc/search/pycbc/output/local-site-scratch
+      operation: all
+  profiles:
+    condor:
+      request_memory: '1000'
+      request_disk: '1000'
+      accounting_group: ligo.dev.o4.cbc.bbh.pycbcoffline
+      getenv: 'True'
+    pegasus:
+      style: condor
+- name: condorpool_copy
+  arch: x86_64
+  os.type: linux
+  directories: []
+  profiles:
+    condor:
+      request_memory: 2G
+    dagman:
+      retry: '2'
+    pegasus:
+      style: condor
+      data.configuration: condorio 

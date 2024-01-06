@@ -1,0 +1,43 @@
+<div class=pycbc-meta key="render-function" value="render_tmplt"></div><div class=pycbc-meta key="filenames" value="V1-PLOT_SNRIFAR_FULL_DATA_1DET_CLOSED-1186740100-3400.png"></div><!-- add a subtitle -->
+
+
+<!-- hold images inside a well -->
+<div class="scaffold well">
+
+    <!-- set file counter integer -->
+    
+
+    <!-- display formatted files -->
+    
+        <div class="row">
+
+            <!-- two file case -->
+            
+
+            <!-- one file case -->
+            
+                <div class="col-md-12" style="padding-top:20px;">
+                <a name="A1"></a>
+                    
+                    {% if path_exists('/home/poseidon/workflows/pycbc/search/pycbc/output/results/5._background_triggers/5.06_V1_background/V1-PLOT_SNRIFAR_FULL_DATA_1DET_CLOSED-1186740100-3400.png') %}
+                        {% set cp = get_embedded_config('/home/poseidon/workflows/pycbc/search/pycbc/output/results/5._background_triggers/5.06_V1_background/V1-PLOT_SNRIFAR_FULL_DATA_1DET_CLOSED-1186740100-3400.png') %}
+                            {% if cp.has_option('V1-PLOT_SNRIFAR_FULL_DATA_1DET_CLOSED-1186740100-3400.png', 'title') %}
+                                <p class="text-center" style="font-size:18px;">
+                                    <a href="#A1">
+                                    <b>A1. {{cp.get('V1-PLOT_SNRIFAR_FULL_DATA_1DET_CLOSED-1186740100-3400.png', 'title')}}</b></p>
+                                    </a>
+                                </p>
+                            {% endif %}
+                            {{ setup_template_render('/home/poseidon/workflows/pycbc/search/pycbc/output/results/5._background_triggers/5.06_V1_background/V1-PLOT_SNRIFAR_FULL_DATA_1DET_CLOSED-1186740100-3400.png' , '') }}
+                    {% endif %}
+                    
+                </div>
+            
+
+            <!-- increment -->
+            
+
+    </div>
+    
+
+</div>
