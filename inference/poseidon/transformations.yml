@@ -1,0 +1,91 @@
+x-pegasus:
+  apiLang: python
+pegasus: 5.0.4
+transformations:
+- name: inference_ID1
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_inference
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: inference
+- name: extract_posterior_ID2
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_inference_extract_samples
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: extract_posterior
+- name: table_summary_ID3
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_inference_table_summary
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: table_summary
+- name: plot_posterior_summary_ID4
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_inference_plot_posterior
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_posterior_summary
+- name: plot_posterior_ID5
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_inference_plot_posterior
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_posterior
+- name: plot_prior_ID6
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_inference_plot_prior
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_prior
+- name: plot_spectrum_ID7
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_plot_psd_file
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_spectrum
+- name: page_versioning_ID8
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_page_versioning
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: page_versioning
+- name: results_page_ID9
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_make_html_page
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: results_page
+
+containers:
+- name: pycbc
+  type: singularity
+  image: http://poseidon-data/~poseidon/containers/pycbc.sif
+  image.site: local

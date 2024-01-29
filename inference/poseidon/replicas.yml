@@ -1,0 +1,41 @@
+x-pegasus:
+  apiLang: python
+  createdBy: mayani
+  createdOn: 12-20-23T11:43:31Z
+pegasus: 5.0.4
+replicas:
+# - lfn: inference-170817.ini
+#   pfns:
+#   - site: condorpool_copy
+#   #- site: local
+#     #pfn: file:///home/poseidon/workflows/pycbc/inference/pycbc/data/config_files/inference-170817.ini
+#     pfn: scp://poseidon@poseidon-data/home/poseidon/workflows/pycbc/inference/pycbc/data/config_files/inference-170817.ini
+# - lfn: H-H1_LOSC_CLN_4_V1-1187007040-2048.gwf
+#   pfns:
+#   - site: condorpool_copy
+#   #- site: local
+#     pfn: scp://poseidon@poseidon-data/home/poseidon/workflows/pycbc/inference/pycbc/data/H-H1_LOSC_CLN_4_V1-1187007040-2048.gwf
+#
+#     #pfn: file:///home/poseidon/workflows/pycbc/inference/pycbc/data/H-H1_LOSC_CLN_4_V1-1187007040-2048.gwf
+# - lfn: L-L1_LOSC_CLN_4_V1-1187007040-2048.gwf
+#   pfns:
+#   - site: condorpool_copy
+#   #- site: local
+#     pfn: scp://poseidon@poseidon-data/home/poseidon/workflows/pycbc/inference/pycbc/data/L-L1_LOSC_CLN_4_V1-1187007040-2048.gwf
+#     #pfn: file:///home/poseidon/workflows/pycbc/inference/pycbc/data/L-L1_LOSC_CLN_4_V1-1187007040-2048.gwf
+# - lfn: V-V1_LOSC_CLN_4_V1-1187007040-2048.gwf
+#   pfns:
+#   - site: condorpool_copy
+#   #- site: local
+#     pfn: scp://poseidon@poseidon-data/home/poseidon/workflows/pycbc/inference/pycbc/data/V-V1_LOSC_CLN_4_V1-1187007040-2048.gwf
+#     #pfn: file:///home/poseidon/workflows/pycbc/inference/pycbc/data/V-V1_LOSC_CLN_4_V1-1187007040-2048.gwf
+- lfn: .*\.ini
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/inference/pycbc/data/config_files/[0]
+  regex: true
+- lfn: .*
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/inference/pycbc/data/[0]
+  regex: true

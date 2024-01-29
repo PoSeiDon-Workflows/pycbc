@@ -1,0 +1,284 @@
+x-pegasus:
+  apiLang: python
+  createdBy: poseidon
+  createdOn: 10-16-23T15:49:14Z
+pegasus: 5.0.4
+name: gw.inference
+jobs:
+  - type: job
+    name: inference_ID1
+    id: ID0000001
+    arguments:
+    - --verbose
+    - ''
+    - --nprocesses
+    - '2'
+    - --config-file
+    - inference-170817.ini
+    - --seed
+    - '0'
+    - --output-file
+    - H1L1V1-INFERENCE_170817-0-0.hdf
+    uses:
+    - lfn: H1L1V1-INFERENCE_170817-0-0.hdf
+      type: output
+      stageOut: true
+      registerReplica: true
+    - lfn: inference-170817.ini
+      type: input
+    - lfn: H-H1_LOSC_CLN_4_V1-1187007040-2048.gwf
+      type: input
+    - lfn: L-L1_LOSC_CLN_4_V1-1187007040-2048.gwf
+      type: input
+    - lfn: V-V1_LOSC_CLN_4_V1-1187007040-2048.gwf
+      type: input
+    profiles:
+      dagman:
+        category: inference
+      selector:
+        execution_site: condorpool_copy
+  - type: job
+    name: extract_posterior_ID2
+    id: ID0000002
+    arguments:
+    - --force
+    - ''
+    - --parameters
+    - '''*'''
+    - --input-file
+    - H1L1V1-INFERENCE_170817-0-0.hdf
+    - --output-file
+    - H1L1V1-EXTRACT_POSTERIOR_170817-0-0.hdf
+    uses:
+    - lfn: H1L1V1-INFERENCE_170817-0-0.hdf
+      type: input
+    - lfn: H1L1V1-EXTRACT_POSTERIOR_170817-0-0.hdf
+      type: output
+      stageOut: true
+      registerReplica: true
+    profiles:
+      dagman:
+        category: extract_posterior
+      selector:
+        execution_site: condorpool_copy
+  - type: job
+    name: table_summary_ID3
+    id: ID0000003
+    arguments:
+    - --input-file
+    - H1L1V1-EXTRACT_POSTERIOR_170817-0-0.hdf
+    - --output-file
+    - H1L1V1-TABLE_SUMMARY_170817-0-0.html
+    - --parameters
+    - tc distance inclination 'snr_from_loglr(loglikelihood-lognl):SNR'
+    - --print-metadata
+    - '''ra:Right Ascension'' ''dec:Declination'' ''approximant:Approximant'''
+    uses:
+    - lfn: H1L1V1-TABLE_SUMMARY_170817-0-0.html
+      type: output
+      stageOut: true
+      registerReplica: true
+    - lfn: H1L1V1-EXTRACT_POSTERIOR_170817-0-0.hdf
+      type: input
+    profiles:
+      dagman:
+        category: table_summary
+        priority: 1000
+      selector:
+        execution_site: condorpool_copy
+  - type: job
+    name: plot_posterior_summary_ID4
+    id: ID0000004
+    arguments:
+    - --plot-contours
+    - ''
+    - --plot-marginal
+    - ''
+    - --plot-density
+    - ''
+    - --density-cmap
+    - Blues
+    - --contour-color
+    - black
+    - --input-file
+    - H1L1V1-EXTRACT_POSTERIOR_170817-0-0.hdf
+    - --output-file
+    - H1L1V1-PLOT_POSTERIOR_SUMMARY_170817_INC_DISTANCE-0-0.png
+    - --parameters
+    - inclination distance
+    - --plot-prior
+    - inference-170817.ini
+    uses:
+    - lfn: H1L1V1-PLOT_POSTERIOR_SUMMARY_170817_INC_DISTANCE-0-0.png
+      type: output
+      stageOut: true
+      registerReplica: true
+    - lfn: inference-170817.ini
+      type: input
+    - lfn: H1L1V1-EXTRACT_POSTERIOR_170817-0-0.hdf
+      type: input
+    profiles:
+      dagman:
+        category: plot_posterior_summary
+        priority: 1000
+      selector:
+        execution_site: condorpool_copy
+  - type: job
+    name: plot_posterior_ID5
+    id: ID0000005
+    arguments:
+    - --plot-contours
+    - ''
+    - --plot-marginal
+    - ''
+    - --plot-scatter
+    - ''
+    - --z-arg
+    - snr
+    - --input-file
+    - H1L1V1-EXTRACT_POSTERIOR_170817-0-0.hdf
+    - --output-file
+    - H1L1V1-PLOT_POSTERIOR_170817_EXTRINSIC-0-0.png
+    - --parameters
+    - tc inclination distance
+    - --plot-prior
+    - inference-170817.ini
+    uses:
+    - lfn: H1L1V1-PLOT_POSTERIOR_170817_EXTRINSIC-0-0.png
+      type: output
+      stageOut: true
+      registerReplica: true
+    - lfn: inference-170817.ini
+      type: input
+    - lfn: H1L1V1-EXTRACT_POSTERIOR_170817-0-0.hdf
+      type: input
+    profiles:
+      dagman:
+        category: plot_posterior
+        priority: 1000
+      selector:
+        execution_site: condorpool_copy
+  - type: job
+    name: plot_prior_ID6
+    id: ID0000006
+    arguments:
+    - --config-file
+    - inference-170817.ini
+    - --output-file
+    - H1L1V1-PLOT_PRIOR_170817-0-0.png
+    uses:
+    - lfn: H1L1V1-PLOT_PRIOR_170817-0-0.png
+      type: output
+      stageOut: true
+      registerReplica: true
+    - lfn: inference-170817.ini
+      type: input
+    profiles:
+      dagman:
+        category: plot_prior
+        priority: 1000
+      selector:
+        execution_site: condorpool_copy
+  - type: job
+    name: plot_spectrum_ID7
+    id: ID0000007
+    arguments:
+    - --dyn-range-factor
+    - '1'
+    - --psd-files
+    - H1L1V1-INFERENCE_170817-0-0.hdf
+    - --output-file
+    - H1L1V1-PLOT_SPECTRUM_170817-0-0.png
+    - --hdf-group
+    - data
+    uses:
+    - lfn: H1L1V1-INFERENCE_170817-0-0.hdf
+      type: input
+    - lfn: H1L1V1-PLOT_SPECTRUM_170817-0-0.png
+      type: output
+      stageOut: true
+      registerReplica: true
+    profiles:
+      dagman:
+        category: plot_spectrum
+        priority: 1000
+      selector:
+        execution_site: condorpool_copy
+
+  - type: job
+    name: page_versioning_ID8
+    id: ID0000008
+    arguments:
+    - --executables
+    - pycbc_inference
+    - pycbc_inference_extract_samples
+    - pycbc_inference_plot_posterior
+    - pycbc_inference_plot_prior
+    - pycbc_inference_table_summary
+    - pycbc_inference_create_fits
+    - pycbc_plot_psd_file
+    - pycbc_make_html_page
+    - pycbc_page_versioning
+    - --executables-names
+    - inference
+    - extract_posterior
+    - plot_posterior,plot_posterior_summary
+    - plot_prior
+    - table_summary
+    - create_fits_file
+    - plot_spectrum
+    - results_page
+    - page_versioning
+    - --output-file
+    - H1L1V1-PAGE_VERSIONING-0-0.html
+    uses:
+    - lfn: H1L1V1-PAGE_VERSIONING-0-0.html
+      type: output
+      stageOut: true
+      registerReplica: true
+    profiles:
+      dagman:
+        category: page_versioning
+      selector:
+        execution_site: condorpool_copy
+  - type: job
+    name: results_page_ID9
+    id: ID0000009
+    arguments:
+    - --analysis-title
+    - '"Example PyCBC Inference Workflow"'
+    - --analysis-subtitle
+    - '"GW170817 with dynesty sampler and single template model"'
+    - --output-path
+    - ./
+    - --plots-dir
+    - ./
+    - --template-file
+    - templates/orange.html
+    uses: []
+    profiles:
+      dagman:
+        category: results_page
+        priority: 1000
+      selector:
+        execution_site: local
+
+jobDependencies:
+  - id: ID0000001
+    children:
+    - ID0000002
+    - ID0000007
+  - id: ID0000002
+    children:
+    - ID0000004
+    - ID0000003
+    - ID0000005
+  - id: ID0000003
+    children:
+    - ID0000009
+  - id: ID0000004
+    children:
+    - ID0000009
+  - id: ID0000005
+    children:
+    - ID0000009
