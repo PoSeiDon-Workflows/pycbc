@@ -36,7 +36,7 @@ jobs:
       dagman:
         category: inference
       selector:
-        execution_site: condorpool_copy
+        execution_site: condorpool
   - type: job
     name: extract_posterior_ID2
     id: ID0000002
@@ -60,7 +60,7 @@ jobs:
       dagman:
         category: extract_posterior
       selector:
-        execution_site: condorpool_copy
+        execution_site: condorpool
   - type: job
     name: table_summary_ID3
     id: ID0000003
@@ -85,7 +85,7 @@ jobs:
         category: table_summary
         priority: 1000
       selector:
-        execution_site: condorpool_copy
+        execution_site: condorpool
   - type: job
     name: plot_posterior_summary_ID4
     id: ID0000004
@@ -122,7 +122,7 @@ jobs:
         category: plot_posterior_summary
         priority: 1000
       selector:
-        execution_site: condorpool_copy
+        execution_site: condorpool
   - type: job
     name: plot_posterior_ID5
     id: ID0000005
@@ -157,7 +157,7 @@ jobs:
         category: plot_posterior
         priority: 1000
       selector:
-        execution_site: condorpool_copy
+        execution_site: condorpool
   - type: job
     name: plot_prior_ID6
     id: ID0000006
@@ -178,7 +178,7 @@ jobs:
         category: plot_prior
         priority: 1000
       selector:
-        execution_site: condorpool_copy
+        execution_site: condorpool
   - type: job
     name: plot_spectrum_ID7
     id: ID0000007
@@ -203,7 +203,7 @@ jobs:
         category: plot_spectrum
         priority: 1000
       selector:
-        execution_site: condorpool_copy
+        execution_site: condorpool
 
   - type: job
     name: page_versioning_ID8
@@ -240,7 +240,7 @@ jobs:
       dagman:
         category: page_versioning
       selector:
-        execution_site: condorpool_copy
+        execution_site: condorpool
   - type: job
     name: results_page_ID9
     id: ID0000009
