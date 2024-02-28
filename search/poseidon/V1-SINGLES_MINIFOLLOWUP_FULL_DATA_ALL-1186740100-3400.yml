@@ -1,0 +1,453 @@
+x-pegasus:
+  apiLang: python
+  createdBy: mayani
+  createdOn: 02-27-24T07:01:54Z
+pegasus: 5.0.4
+name: V1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax
+replicaCatalog:
+  replicas:
+  - lfn: V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
+    pfns:
+    - site: local
+      pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
+  - lfn: H1L1V1-BANK2HDF-1186740100-3400.hdf
+    pfns:
+    - site: local
+      pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/H1L1V1-BANK2HDF-1186740100-3400.hdf
+  - lfn: H1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+    pfns:
+    - site: local
+      pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/H1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+  - lfn: L1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+    pfns:
+    - site: local
+      pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/L1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+  - lfn: V1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+    pfns:
+    - site: local
+      pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/V1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+  - lfn: V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf
+    pfns:
+    - site: local
+      pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/data/V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf
+  - lfn: H1L1V1-INSP_SEGMENTS-1186740100-3400.xml
+    pfns:
+    - site: local
+      pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/results/1._analysis_time/1.01_segment_data/H1L1V1-INSP_SEGMENTS-1186740100-3400.xml
+transformationCatalog:
+  containers:
+  - name: pycbc
+    type: singularity
+    image: http://poseidon-data/~poseidon/containers/pycbc.sif
+    image.site: local
+
+  transformations:
+  - name: page_snglinfo_ID0
+    sites:
+    - name: condorpool_copy
+      pfn: /usr/local/bin/pycbc_page_snglinfo
+      type: installed
+      container: pycbc
+    profiles:
+      pegasus:
+        relative.submit.dir: page_snglinfo
+  - name: plot_trigger_timeseries_ID1
+    sites:
+    - name: condorpool_copy
+      pfn: /usr/local/bin/pycbc_plot_trigger_timeseries
+      type: installed
+      container: pycbc
+    profiles:
+      pegasus:
+        relative.submit.dir: plot_trigger_timeseries
+  - name: single_template_ID3
+    sites:
+    - name: condorpool_copy
+      pfn: /usr/local/bin/pycbc_single_template
+      type: installed
+      container: pycbc
+    profiles:
+      pegasus:
+        relative.submit.dir: single_template
+  - name: single_template_plot_ID4
+    sites:
+    - name: condorpool_copy
+      pfn: /usr/local/bin/pycbc_single_template_plot
+      type: installed
+      container: pycbc
+    profiles:
+      pegasus:
+        relative.submit.dir: single_template_plot
+  - name: plot_waveform_ID5
+    sites:
+    - name: condorpool_copy
+      pfn: /usr/local/bin/pycbc_plot_waveform
+      type: installed
+      container: pycbc
+    profiles:
+      pegasus:
+        relative.submit.dir: plot_waveform
+  - name: plot_singles_timefreq_ID6
+    sites:
+    - name: condorpool_copy
+      pfn: /usr/local/bin/pycbc_plot_singles_timefreq
+      type: installed
+      container: pycbc
+    profiles:
+      pegasus:
+        relative.submit.dir: plot_singles_timefreq
+  - name: plot_qscan_ID7
+    sites:
+    - name: condorpool_copy
+      pfn: /usr/local/bin/pycbc_plot_qscan
+      type: installed
+      container: pycbc
+    profiles:
+      pegasus:
+        relative.submit.dir: plot_qscan
+jobs:
+- type: job
+  name: page_snglinfo_ID0
+  id: ID0000001
+  arguments:
+  - --ranking-statistic
+  - single_ranking_only
+  - --sngl-ranking
+  - newsnr_sgveto_psdvar
+  - --single-trigger-file
+  - V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
+  - --bank-file
+  - H1L1V1-BANK2HDF-1186740100-3400.hdf
+  - --trigger-id
+  - '156593'
+  - --instrument
+  - V1
+  - --statistic-files
+  - H1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+  - L1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+  - V1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+  - --output-file
+  - V1-PAGE_SNGLINFO_FULL_DATA_ALL_0-1186740100-3400.html
+  uses:
+  - lfn: H1L1V1-BANK2HDF-1186740100-3400.hdf
+    type: input
+  - lfn: L1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+    type: input
+  - lfn: V1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+    type: input
+  - lfn: V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
+    type: input
+  - lfn: H1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+    type: input
+  - lfn: V1-PAGE_SNGLINFO_FULL_DATA_ALL_0-1186740100-3400.html
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    dagman:
+      category: page_snglinfo
+      priority: 1000
+    selector:
+      execution_site: condorpool_copy
+- type: job
+  name: plot_trigger_timeseries_ID1
+  id: ID0000002
+  arguments:
+  - '--single-trigger-files V1:V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf '
+  - --window
+  - '1'
+  - --plot-type
+  - snr
+  - --log-y-axis
+  - ''
+  - --times
+  - V1:1186741295.415039
+  - --output-file
+  - V1-PLOT_TRIGGER_TIMESERIES_SNR1_FULL_DATA_ALL_0-1186740100-3400.png
+  - --special-trigger-ids
+  - V1:156593
+  uses:
+  - lfn: V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
+    type: input
+  - lfn: V1-PLOT_TRIGGER_TIMESERIES_SNR1_FULL_DATA_ALL_0-1186740100-3400.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    dagman:
+      category: plot_trigger_timeseries
+      priority: 1000
+    selector:
+      execution_site: condorpool_copy
+- type: job
+  name: plot_trigger_timeseries_ID1
+  id: ID0000003
+  arguments:
+  - '--single-trigger-files V1:V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf '
+  - --window
+  - '1'
+  - --plot-type
+  - newsnr
+  - --times
+  - V1:1186741295.415039
+  - --output-file
+  - V1-PLOT_TRIGGER_TIMESERIES_NEWSNR1_FULL_DATA_ALL_0-1186740100-3400.png
+  - --special-trigger-ids
+  - V1:156593
+  uses:
+  - lfn: V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
+    type: input
+  - lfn: V1-PLOT_TRIGGER_TIMESERIES_NEWSNR1_FULL_DATA_ALL_0-1186740100-3400.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    dagman:
+      category: plot_trigger_timeseries
+      priority: 1000
+    selector:
+      execution_site: condorpool_copy
+- type: job
+  name: single_template_ID3
+  id: ID0000004
+  arguments:
+  - '--frame-files V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf '
+  - --segment-length
+  - '512'
+  - --segment-start-pad
+  - '32'
+  - --segment-end-pad
+  - '16'
+  - --psd-estimation
+  - median
+  - --psd-segment-length
+  - '16'
+  - --psd-segment-stride
+  - '8'
+  - --psd-inverse-length
+  - '16'
+  - --chisq-bins
+  - '16'
+  - --low-frequency-cutoff
+  - '20'
+  - --approximant
+  - IMRPhenomD
+  - --processing-scheme
+  - mkl
+  - --window
+  - '10'
+  - --psd-num-segments
+  - '63'
+  - --taper-data
+  - '1'
+  - --allow-zero-padding
+  - ''
+  - --autogating-threshold
+  - '50'
+  - --autogating-cluster
+  - '0.5'
+  - --autogating-width
+  - '0.25'
+  - --autogating-taper
+  - '0.25'
+  - --autogating-pad
+  - '16'
+  - --minimum-chisq-bins
+  - '3'
+  - --strain-high-pass
+  - '15'
+  - --sample-rate
+  - '2048'
+  - --pad-data
+  - '8'
+  - --channel-name
+  - V1:LOSC-STRAIN
+  - --mass1
+  - '17.004384'
+  - --mass2
+  - '14.777215'
+  - --spin1z
+  - '0.166726'
+  - --spin2z
+  - '0.179093'
+  - --template-start-frequency
+  - '20.000000'
+  - --trigger-time
+  - '1186741295.415039'
+  - --inspiral-segments
+  - H1L1V1-INSP_SEGMENTS-1186740100-3400.xml
+  - --data-read-name
+  - DATA_ANALYSED
+  - --data-analyzed-name
+  - TRIGGERS_GENERATED
+  - --output-file
+  - V1-SINGLE_TEMPLATE_P1_FULL_DATA_ALL_0-1186740100-3400.hdf
+  uses:
+  - lfn: H1L1V1-INSP_SEGMENTS-1186740100-3400.xml
+    type: input
+  - lfn: V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf
+    type: input
+  - lfn: V1-SINGLE_TEMPLATE_P1_FULL_DATA_ALL_0-1186740100-3400.hdf
+    type: output
+    stageOut: false
+    registerReplica: true
+  profiles:
+    dagman:
+      category: single_template
+      priority: 1000
+    selector:
+      execution_site: condorpool_copy
+- type: job
+  name: single_template_plot_ID4
+  id: ID0000005
+  arguments:
+  - --window
+  - '0.1'
+  - --single-template-file
+  - V1-SINGLE_TEMPLATE_P1_FULL_DATA_ALL_0-1186740100-3400.hdf
+  - --output-file
+  - V1-SINGLE_TEMPLATE_PLOT_P1_FULL_DATA_ALL_0-1186740100-3400.png
+  - --plot-title
+  - '''V1 SNR and chi^2 timeseries'''
+  - --plot-caption
+  - '''The SNR and chi^2 timeseries around the injection. The template used has the
+    following parameters: mass1=17.00438354942154, mass2=14.77721503065017, spin1z=0.1667261919686139,
+    spin2z=0.17909280383990403'''
+  uses:
+  - lfn: V1-SINGLE_TEMPLATE_PLOT_P1_FULL_DATA_ALL_0-1186740100-3400.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: V1-SINGLE_TEMPLATE_P1_FULL_DATA_ALL_0-1186740100-3400.hdf
+    type: input
+  profiles:
+    dagman:
+      category: single_template_plot
+      priority: 1000
+    selector:
+      execution_site: condorpool_copy
+- type: job
+  name: plot_waveform_ID5
+  id: ID0000006
+  arguments:
+  - --low-frequency-cutoff
+  - '20'
+  - --waveform-length
+  - '512'
+  - --sample-rate
+  - '2048'
+  - --approximant
+  - IMRPhenomD
+  - --mass1
+  - '17.004384'
+  - --mass2
+  - '14.777215'
+  - --spin1z
+  - '0.166726'
+  - --spin2z
+  - '0.179093'
+  - --output-file
+  - V1-PLOT_WAVEFORM_P1_FULL_DATA_ALL_0-1186740100-3400.png
+  uses:
+  - lfn: V1-PLOT_WAVEFORM_P1_FULL_DATA_ALL_0-1186740100-3400.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    dagman:
+      category: plot_waveform
+      priority: 1000
+    selector:
+      execution_site: condorpool_copy
+- type: job
+  name: plot_singles_timefreq_ID6
+  id: ID0000007
+  arguments:
+  - '--frame-files V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf '
+  - --f-low
+  - '20'
+  - --rank
+  - newsnr
+  - --num-loudest
+  - '1'
+  - --approximant
+  - TaylorF2
+  - --strain-high-pass
+  - '15'
+  - --sample-rate
+  - '2048'
+  - --pad-data
+  - '8'
+  - --channel-name
+  - V1:LOSC-STRAIN
+  - --trig-file
+  - V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
+  - --bank-file
+  - H1L1V1-BANK2HDF-1186740100-3400.hdf
+  - --gps-start-time
+  - '1186741285'
+  - --gps-end-time
+  - '1186741305'
+  - --center-time
+  - '1186741295.415039'
+  - --detector
+  - V1
+  - --output-file
+  - V1-PLOT_SINGLES_TIMEFREQ_FULL_DATA_ALL_0-1186740100-3400.png
+  uses:
+  - lfn: V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf
+    type: input
+  - lfn: H1L1V1-BANK2HDF-1186740100-3400.hdf
+    type: input
+  - lfn: V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
+    type: input
+  - lfn: V1-PLOT_SINGLES_TIMEFREQ_FULL_DATA_ALL_0-1186740100-3400.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    dagman:
+      category: plot_singles_timefreq
+      priority: 1000
+    selector:
+      execution_site: condorpool_copy
+- type: job
+  name: plot_qscan_ID7
+  id: ID0000008
+  arguments:
+  - '--frame-files V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf '
+  - --time-windows
+  - 10,1 1,1
+  - --strain-high-pass
+  - '15'
+  - --sample-rate
+  - '2048'
+  - --pad-data
+  - '8'
+  - --channel-name
+  - V1:LOSC-STRAIN
+  - --gps-start-time
+  - '1186741195'
+  - --gps-end-time
+  - '1186741395'
+  - --center-time
+  - '1186741295.415039'
+  - --output-file
+  - V1-PLOT_QSCAN_FULL_DATA_ALL_0-1186740100-3400.png
+  uses:
+  - lfn: V1-PLOT_QSCAN_FULL_DATA_ALL_0-1186740100-3400.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf
+    type: input
+  profiles:
+    dagman:
+      category: plot_qscan
+      priority: 1000
+    selector:
+      execution_site: condorpool_copy
+jobDependencies:
+- id: ID0000004
+  children:
+  - ID0000005

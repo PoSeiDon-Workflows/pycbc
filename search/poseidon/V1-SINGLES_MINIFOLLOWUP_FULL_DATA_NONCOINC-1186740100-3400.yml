@@ -1,0 +1,12 @@
+x-pegasus:
+  apiLang: python
+  createdBy: mayani
+  createdOn: 02-27-24T07:01:54Z
+pegasus: 5.0.4
+name: V1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.dax
+replicaCatalog:
+  replicas: []
+transformationCatalog:
+  transformations: []
+jobs: []
+jobDependencies: []

@@ -1,0 +1,144 @@
+x-pegasus:
+  apiLang: python
+  createdBy: mayani
+  createdOn: 12-20-23T11:43:31Z
+pegasus: 5.0.4
+replicas:
+- lfn: bank.hdf
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/data/bank.hdf
+- lfn: H-H1_LOSC_CLN_4_V1-1186740069-3584.gwf
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/data/H-H1_LOSC_CLN_4_V1-1186740069-3584.gwf
+- lfn: L-L1_LOSC_CLN_4_V1-1186740069-3584.gwf
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/data/L-L1_LOSC_CLN_4_V1-1186740069-3584.gwf
+- lfn: V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/data/V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf
+- lfn: H1L1V1-VETOES-1186740100-3400.xml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/results/1._analysis_time/1.01_segment_data/H1L1V1-VETOES-1186740100-3400.xml
+- lfn: statHL.hdf
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/data/statHL.hdf
+- lfn: statLV.hdf
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/data/statLV.hdf
+- lfn: statHV.hdf
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/data/statHV.hdf
+- lfn: statHLV.hdf
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/data/statHLV.hdf
+- lfn: V1-DATA_ANALYSED_0-1186740100-3400.xml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/psds/V1-DATA_ANALYSED_0-1186740100-3400.xml
+- lfn: L1-DATA_ANALYSED_0-1186740100-3400.xml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/psds/L1-DATA_ANALYSED_0-1186740100-3400.xml
+- lfn: H1-DATA_ANALYSED_0-1186740100-3400.xml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/psds/H1-DATA_ANALYSED_0-1186740100-3400.xml
+- lfn: H1L1V1-INSP_SEGMENTS-1186740100-3400.xml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/results/1._analysis_time/1.01_segment_data/H1L1V1-INSP_SEGMENTS-1186740100-3400.xml
+- lfn: H1L1V1-SCIENCE-1186740100-3400.xml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/results/1._analysis_time/1.01_segment_data/H1L1V1-SCIENCE-1186740100-3400.xml
+- lfn: H1L1V1-SCIENCE_AVAILABLE-1186740100-3400.xml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/datafind/H1L1V1-SCIENCE_AVAILABLE-1186740100-3400.xml
+- lfn: H1FULL_DATA_noncoincsingles_minifollowup.ini
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/H1FULL_DATA_noncoincsingles_minifollowup.ini
+- lfn: H1FULL_DATA_allsingles_minifollowup.ini
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/H1FULL_DATA_allsingles_minifollowup.ini
+- lfn: L1FULL_DATA_noncoincsingles_minifollowup.ini
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/L1FULL_DATA_noncoincsingles_minifollowup.ini
+- lfn: L1FULL_DATA_allsingles_minifollowup.ini
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/L1FULL_DATA_allsingles_minifollowup.ini
+- lfn: V1FULL_DATA_noncoincsingles_minifollowup.ini
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/V1FULL_DATA_noncoincsingles_minifollowup.ini
+- lfn: V1FULL_DATA_allsingles_minifollowup.ini
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/V1FULL_DATA_allsingles_minifollowup.ini
+- lfn: FULL_DATA_foregroundforeground_minifollowup.ini
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/FULL_DATA_foregroundforeground_minifollowup.ini
+- lfn: FULL_DATA_backgroundforeground_minifollowup.ini
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/FULL_DATA_backgroundforeground_minifollowup.ini
+- lfn: BBHinjection_minifollowup.ini
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/BBHinjection_minifollowup.ini
+
+
+# -------------
+# Sub Workflows
+# -------------
+
+- lfn: H1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.yml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/H1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.yml
+- lfn: H1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.yml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/H1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.yml
+- lfn: H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_BACKGROUND-1186740100-3400.yml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_BACKGROUND-1186740100-3400.yml
+- lfn: H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_FOREGROUND-1186740100-3400.yml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/H1L1V1-FOREGROUND_MINIFOLLOWUP_FULL_DATA_FOREGROUND-1186740100-3400.yml
+- lfn: H1L1V1-INJECTION_MINIFOLLOWUP_BBH-1186740100-3400.yml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/H1L1V1-INJECTION_MINIFOLLOWUP_BBH-1186740100-3400.yml
+- lfn: L1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.yml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/L1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.yml
+- lfn: L1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.yml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/L1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.yml
+- lfn: V1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.yml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/V1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.yml
+- lfn: V1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.yml
+  pfns:
+  - site: local
+    pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/V1-SINGLES_MINIFOLLOWUP_FULL_DATA_NONCOINC-1186740100-3400.yml

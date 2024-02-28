@@ -1,0 +1,452 @@
+x-pegasus:
+  apiLang: python
+pegasus: 5.0.4
+
+containers:
+- name: pycbc
+  type: singularity
+  image: http://poseidon-data/~poseidon/containers/pycbc.sif
+  image.site: local
+
+transformations:
+- name: bank2hdf_ID0
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_coinc_bank2hdf
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: bank2hdf
+- name: splitbank_ID1
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_hdf5_splitbank
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: splitbank
+- name: plot_bank_ID2
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_plot_bank_bins
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_bank
+- name: inspiral-FULL_DATA-H1_ID3
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_inspiral
+    type: installed
+    container: pycbc
+- name: inspiral-FULL_DATA-L1_ID4
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_inspiral
+    type: installed
+    container: pycbc
+- name: inspiral-FULL_DATA-V1_ID5
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_inspiral
+    type: installed
+    container: pycbc
+- name: hdf_trigger_merge_ID6
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_coinc_mergetrigs
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: hdf_trigger_merge
+- name: fit_by_template_ID9
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_fit_sngls_by_template
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: fit_by_template
+- name: fit_over_param_ID10
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_fit_sngls_over_multiparam
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: fit_over_param
+- name: coinc_ID15
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_coinc_findtrigs
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: coinc
+- name: statmap_ID16
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_coinc_statmap
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: statmap
+- name: sngls_ID23
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_sngls_findtrigs
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: sngls
+- name: sngls_statmap_ID24
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_sngls_statmap
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: sngls_statmap
+- name: exclude_zerolag_ID29
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_exclude_zerolag
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: exclude_zerolag
+- name: combine_statmap_ID36
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_add_statmap
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: combine_statmap
+- name: foreground_censor_ID37
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_foreground_censor
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: foreground_censor
+- name: calculate_psd_ID38
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_calculate_psd
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: calculate_psd
+- name: plot_spectrum_ID41
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_plot_psd_file
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_spectrum
+- name: plot_range_ID42
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_plot_range
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_range
+- name: plot_segments_ID43
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_segments
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_segments
+- name: plot_gating_ID44
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_plot_gating
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_gating
+- name: page_segtable_ID45
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_segtable
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: page_segtable
+- name: page_segplot_ID46
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_segplot
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: page_segplot
+- name: plot_snrchi_ID48
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_snrchi
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_snrchi
+- name: plot_singles_ID51
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_plot_singles_vs_params
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_singles
+- name: plot_hist_ID52
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_plot_hist
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_hist
+- name: plot_binnedhist_ID54
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_fit_sngls_split_binned
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_binnedhist
+- name: plot_throughput_ID63
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_plot_throughput
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_throughput
+- name: singles_minifollowup_ID64
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_sngl_minifollowup
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: singles_minifollowup
+- name: page_ifar_catalog_ID70
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_ifar_catalog
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: page_ifar_catalog
+- name: page_foreground_ID71
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_foreground
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: page_foreground
+- name: foreground_minifollowup_ID74
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_foreground_minifollowup
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: foreground_minifollowup
+- name: plot_snrifar_ID76
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_snrifar
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_snrifar
+- name: plot_snrratehist_ID78
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_snrratehist
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_snrratehist
+- name: page_ifar_ID80
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_ifar
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: page_ifar
+- name: injections_ID123
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/lalapps_inspinj
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: injections
+- name: inj2hdf_ID124
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_convertinjfiletohdf
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: inj2hdf
+- name: optimal_snr_ID125
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_optimal_snr
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: optimal_snr
+- name: optimal_snr_merge_ID127
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_merge_inj_hdf
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: optimal_snr_merge
+- name: inspiral-BBH_INJECTIONS-H1_ID128
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_inspiral
+    type: installed
+    container: pycbc
+- name: inspiral-BBH_INJECTIONS-L1_ID129
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_inspiral
+    type: installed
+    container: pycbc
+- name: inspiral-BBH_INJECTIONS-V1_ID130
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_inspiral
+    type: installed
+    container: pycbc
+- name: statmap_inj_ID135
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_coinc_statmap_inj
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: statmap_inj
+- name: sngls_statmap_inj_ID143
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_sngls_statmap_inj
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: sngls_statmap_inj
+- name: hdfinjfind_ID149
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_coinc_hdfinjfind
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: hdfinjfind
+- name: plot_foundmissed_ID151
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_foundmissed
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_foundmissed
+- name: page_injections_ID153
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_injtable
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: page_injections
+- name: plot_coinc_snrchi_ID155
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_coinc_snrchi
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_coinc_snrchi
+- name: injection_minifollowup_ID164
+  sites:
+  - name: local
+    pfn: /usr/local/bin/pycbc_injection_minifollowup
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: injection_minifollowup
+- name: plot_sensitivity_ID166
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_sensitivity
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: plot_sensitivity
+- name: page_versioning_ID174
+  sites:
+  - name: condorpool_copy
+    pfn: /usr/local/bin/pycbc_page_versioning
+    type: installed
+    container: pycbc
+  profiles:
+    pegasus:
+      relative.submit.dir: page_versioning
