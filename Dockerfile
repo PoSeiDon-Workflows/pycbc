@@ -7,7 +7,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && pip install virtualenvwrapper virtualenv \
     && apt-get -o Acquire::Retries=3 install -y *fftw3* intel-mkl* \
     && pip3 install --ignore-installed cryptography scipy dynesty \
-    && pip3 install --ignore-installed git+https://github.com/gwastro/pycbc.git@v2.3.2 \
+    && pip3 install --ignore-installed git+https://github.com/gwastro/pycbc.git@fd2681702e452739a3e08c9755a0f7f5c3a724b7 \
     && pip3 install pyopenssl
     # && wget -qO - https://download.pegasus.isi.edu/pegasus/gpg.txt | apt-key add - \
     # && echo 'deb https://download.pegasus.isi.edu/pegasus/ubuntu focal main' >/etc/apt/sources.list.d/pegasus.list \
