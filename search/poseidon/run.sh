@@ -3,6 +3,7 @@
 DIR=dags
 
 pegasus-graphviz --label=xform \
+                 --files \
                  --output search.png \
                  workflow.yml &> /dev/null
 
