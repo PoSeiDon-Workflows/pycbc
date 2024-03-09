@@ -44,7 +44,7 @@ jobs:
     - --force
     - ''
     - --parameters
-    - '''*'''
+    - '''\*'''
     - --input-file
     - H1L1V1-INFERENCE_170817-0-0.hdf
     - --output-file
