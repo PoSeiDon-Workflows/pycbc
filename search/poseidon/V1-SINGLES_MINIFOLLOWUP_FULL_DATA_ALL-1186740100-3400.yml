@@ -4,36 +4,36 @@ x-pegasus:
   createdOn: 02-27-24T07:01:54Z
 pegasus: 5.0.4
 name: V1-SINGLES_MINIFOLLOWUP_FULL_DATA_ALL-1186740100-3400.dax
-replicaCatalog:
-  replicas:
-  - lfn: V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
-    pfns:
-    - site: local
-      pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
-  - lfn: H1L1V1-BANK2HDF-1186740100-3400.hdf
-    pfns:
-    - site: local
-      pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/H1L1V1-BANK2HDF-1186740100-3400.hdf
-  - lfn: H1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
-    pfns:
-    - site: local
-      pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/H1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
-  - lfn: L1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
-    pfns:
-    - site: local
-      pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/L1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
-  - lfn: V1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
-    pfns:
-    - site: local
-      pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/V1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
-  - lfn: V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf
-    pfns:
-    - site: local
-      pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/data/V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf
-  - lfn: H1L1V1-INSP_SEGMENTS-1186740100-3400.xml
-    pfns:
-    - site: local
-      pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/results/1._analysis_time/1.01_segment_data/H1L1V1-INSP_SEGMENTS-1186740100-3400.xml
+# replicaCatalog:
+#   replicas:
+#   - lfn: V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
+#     pfns:
+#     - site: local
+#       pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/V1-HDF_TRIGGER_MERGE_FULL_DATA-1186740100-3400.hdf
+#   - lfn: H1L1V1-BANK2HDF-1186740100-3400.hdf
+#     pfns:
+#     - site: local
+#       pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/H1L1V1-BANK2HDF-1186740100-3400.hdf
+#   - lfn: H1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+#     pfns:
+#     - site: local
+#       pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/H1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+#   - lfn: L1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+#     pfns:
+#     - site: local
+#       pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/L1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+#   - lfn: V1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+#     pfns:
+#     - site: local
+#       pfn: http://poseidon-data/~poseidon/pycbc/search/poseidon/output/V1-FIT_OVER_PARAM_FULL_DATA-1186740100-3400.hdf
+#   - lfn: V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf
+#     pfns:
+#     - site: local
+#       pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/data/V-V1_LOSC_CLN_4_V1-1186739813-4096.gwf
+#   - lfn: H1L1V1-INSP_SEGMENTS-1186740100-3400.xml
+#     pfns:
+#     - site: local
+#       pfn: http://poseidon-data/~poseidon/pycbc/search/pycbc/output/results/1._analysis_time/1.01_segment_data/H1L1V1-INSP_SEGMENTS-1186740100-3400.xml
 transformationCatalog:
   containers:
   - name: pycbc
